@@ -18,7 +18,7 @@ function handleClick(props) {
           id={props.id}
           onClick={() => handleClick(props)} />
 
-        />
+        
     </div>
       {/* <div className="name">
       <strong>Name:</strong> {props.name}

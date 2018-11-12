@@ -11,7 +11,7 @@ function Footer(props) {
         </div>
       </div>
       <div className="footer-copyright">
-        <div className="container center">
+        <div className="container text-align-center">
         © 2017 Clicky Game by Seema Joshi
         </div>
       </div>

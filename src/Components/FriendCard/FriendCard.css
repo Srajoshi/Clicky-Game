@@ -1,8 +1,8 @@
 .card {
-   background: #fff; 
+  background: #fff;
   border-radius: 2px;
   height: 240px;
- margin: 1rem; 
+  margin: 1rem;
   position: relative;
   width: 270px;
   cursor: pointer;
@@ -11,36 +11,38 @@
   text-align: left;
   display: inline-block;
 }
+
 .card:hover {
-	transform: scale(1.06);
+  transform: scale(1.06);
 }
 
 .imageBox {
   display: inline-block;
-  
+
 
 }
-.card > .img-container {
+
+.card>.img-container {
   height: 100%;
   overflow: hidden;
   text-align: center;
-  background:rgb(117, 117, 138);
+  background: rgb(117, 117, 138);
 }
-.card > .img-container > 
-img {
+
+.card>.img-container>img {
   width: 100%
 }
 
-.card > .content {
+.card>.content {
   padding-left: 1rem;
   padding-right: 1rem;
   font-size: 15px;
 }
 
-.card > .content > ul {
+.card>.content>ul {
   list-style-type: none;
-}
-
-.card > .content > ul > li {
-  margin-top: 18px;
 } 
+
+.card>.content>ul>li {
+  margin-top: 18px;
+}

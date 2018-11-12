@@ -14,8 +14,8 @@ class App extends Component {
     friends: friends,
     clickedCardIds: [],
     score: 0,
-    goal: 5,
-    footerText: ""
+    topScore: 0,
+    navBarText: ""
   };
 
   //shuffle the pup cards in the browser when clicked
@@ -23,18 +23,23 @@ class App extends Component {
     let clickedCardIds = this.state.clickedCardIds;
 
     if (clickedCardIds.includes(id)) {
-      this.setState({ clickedCardIds: [], score: 0, footerText: "Game Over! You lost. Click to play again!" });
+      this.setState({ clickedCardIds: [], score: 0, navBarText: "Game Over! You lost. Click to play again!" });
       return;
     } else {
       clickedCardIds.push(id)
+      this.setState({score: this.state.score + 1})
+      if (this.state.score >= this.state.topScore) {
+        this.setState({topScore: this.state.score + 1})
+      }
 
-      if (clickedCardIds.length === 5) {
-        this.setState({ score: 5, footerText: "You Won! Click to play again!", clickedCardIds: [] });
+
+      if (this.state.score === 12) {
+        this.setState({ score: 0, navBarText: "You Won! Click to play again!", clickedCardIds: [], friends: friends});
         console.log('You Win');
         return;
       }
 
-      this.setState({ clickedCardIds, score: clickedCardIds.length, footerText: " " });
+      this.setState({navBarText: " " });
 
       // for (let i = cards.length - 1; i > 0; i--) {
       //   let j = Math.floor(Math.random() * (i + 1));
@@ -64,7 +69,7 @@ class App extends Component {
 
   renderCards = (array) => {
     return this.state.friends.map(friend => (
-      <section className='col s4 m3 l3' key={friend.id} id={friend.id}>
+      <section className="col s4 m3 l3" key={friend.id} id={friend.id}>
         <Wrapper>
           <FriendCard
             name={friend.name}
@@ -80,12 +85,12 @@ class App extends Component {
       render() {
         return (
           <div className="container-fluid">
-            <Navbar score={this.state.score} topScore={this.state.topScore}/>
+            <Navbar text={this.state.navBarText} score={this.state.score} topScore={this.state.topScore}/>
             <br />
             <div className="container row cardWrapper">
               {this.renderCards(this.state.cards)}
             </div>
-            <Footer text={this.state.footerText}/>
+            <Footer/>
           </div>
         );
       }
