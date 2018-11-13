@@ -4,6 +4,7 @@
 
 .message {  
   text-justify: right;
+  margin-right: 5px;
 }
 
 /* .scores {

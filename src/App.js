@@ -80,10 +80,10 @@ class App extends Component {
 
       render() {
         return (
-          <div className="container-fluid">
+          <div className="container-fluid col-10">
             <Navbar text={this.state.navBarText} score={this.state.score} topScore={this.state.topScore}/>
             <br />
-            <div className="container row cardWrapper">
+            <div className="row cardWrapper">
               {this.renderCards(this.state.cards)}
             </div>
             <Footer/>
