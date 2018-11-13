@@ -15,7 +15,7 @@ class App extends Component {
     clickedCardIds: [],
     score: 0,
     topScore: 0,
-    navBarText: ""
+    navBarText: "Click on an image to earn points, but don't click on the same image twice!"
   };
 
   //shuffle the pup cards in the browser when clicked
@@ -23,7 +23,7 @@ class App extends Component {
     let clickedCardIds = this.state.clickedCardIds;
 
     if (clickedCardIds.includes(id)) {
-      this.setState({ clickedCardIds: [], score: 0, navBarText: "Game Over! You lost. Click to play again!" });
+      this.setState({ clickedCardIds: [], navBarText: "Game Over! You lost. Click to play again!", score: 0});
       return;
     } else {
       clickedCardIds.push(id)
@@ -41,10 +41,6 @@ class App extends Component {
 
       this.setState({navBarText: " " });
 
-      // for (let i = cards.length - 1; i > 0; i--) {
-      //   let j = Math.floor(Math.random() * (i + 1));
-      //   [cards[i], cards[j]] = [cards[j], cards[i]];
-      // }
     }
   }
 

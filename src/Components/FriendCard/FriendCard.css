@@ -13,7 +13,7 @@
 }
 
 .card:hover {
-  transform: scale(1.06);
+  transform: scale(1.01);
 }
 
 .imageBox {
@@ -25,7 +25,6 @@
 .card>.img-container {
   height: 100%;
   overflow: hidden;
-  text-align: center;
   background: rgb(117, 117, 138);
 }
 

@@ -17,8 +17,6 @@ function handleClick(props) {
           src={props.image}
           id={props.id}
           onClick={() => handleClick(props)} />
-
-        
     </div>
       {/* <div className="name">
       <strong>Name:</strong> {props.name}

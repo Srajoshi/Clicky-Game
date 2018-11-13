@@ -1,3 +1,12 @@
+.navbar li {
+  display: inline-block;
+}
 
+.message {  
+  text-justify: right;
+}
 
-    
+/* .scores {
+float: right;
+
+}  */

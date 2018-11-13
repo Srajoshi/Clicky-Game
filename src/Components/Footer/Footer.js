@@ -1,17 +1,15 @@
-import React from 'react';
-
-
+import React from "react";
 
 function Footer(props) {
   return (
-    <footer className="page-footer">
+    <footer className="page-footer bg-primary">
       <div className="container">
         <div className="row">
           <h5 className="center white-text footer-update">{props.text}</h5>
         </div>
       </div>
       <div className="footer-copyright">
-        <div className="container text-align-center">
+        <div className="container text-center">
         © 2017 Clicky Game by Seema Joshi
         </div>
       </div>
