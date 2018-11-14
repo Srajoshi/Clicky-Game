@@ -9,7 +9,7 @@ import Footer from "./Components/Footer";
 
 
 class App extends Component {
-  // Setting this.state.cards to the cards json array
+  // Setting this.state.friends to the friends json array
   state = {
     friends: friends,
     clickedCardIds: [],
@@ -18,7 +18,7 @@ class App extends Component {
     navBarText: "Click on an image to earn points, but don't click on the same image twice!"
   };
 
-  //shuffle the pup cards in the browser when clicked
+  //shuffle the friends cards in the browser when clicked; Add a point to the score and total score when new images are clicked.import. Game Over if any image is clicked twice.
   clickedFriend = (id) => {
     let clickedCardIds = this.state.clickedCardIds;
 
@@ -62,7 +62,7 @@ class App extends Component {
     this.setState({ friends: friends });
 
   }
-
+// print cards using .map
   renderCards = (array) => {
     return this.state.friends.map(friend => (
       <section className="col s4 m3 l3" key={friend.id} id={friend.id}>
